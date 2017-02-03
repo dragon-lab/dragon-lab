@@ -53,4 +53,10 @@ Ctrl+l | 类似 clear 命令效果
 
 ### macos sierra
 
+    这里需要说明的是黑苹果安装是不被苹果允许的
+
+#### 下载macos sierra
+
+从App Store中下载`macos sierra`
+
 ### fedora
