@@ -67,37 +67,39 @@ Ctrl+l | 类似 clear 命令效果
 
 ### 下载基础工具
 
-从`App Store`中下载`macos sierra`
+1. 从`App Store`中下载`macos sierra`
 
-![Download-macos](/images/download-macos-sierra.png)
+2. ![Download-macos](/images/download-macos-sierra.png)
 
-下载[Unibeast](/assets/UniBeast-7.0.1.zip)，用于制作U盘镜像。
+3. 下载[Unibeast](/assets/UniBeast-7.0.1.zip)，用于制作U盘镜像。
+
+4. 下载[MultiBeast-Sierra-Edition](/assets/MultiBeast-Sierra-Edition-9.0.1.zip)
 
 ### 制作USB启动工具
 
-格式化USB设备（U盘）
+1. 格式化USB设备（U盘）
 
-![](/images/formatter-usb-boot-device.png)
+    ![](/images/formatter-usb-boot-device.png)
 
-![](/images/formatter-usb-boot-device2.png)
+    ![](/images/formatter-usb-boot-device2.png)
 
-使用Unibeast制作U盘镜像
+2. 使用Unibeast制作U盘镜像
 
-![](/images/selected-usb.png)
+    ![](/images/selected-usb.png)
 
-![](/images/selected-installation-type.png)
+    ![](/images/selected-installation-type.png)
 
-![](/images/bootloader-configuration.png)
+    ![](/images/bootloader-configuration.png)
 
-如果主板支持UEFI引导，则选择第一个，不支持则选择第二个。
+    如果主板支持UEFI引导，则选择第一个，不支持则选择第二个。
 
-![](/images/graph-device.png)
+    ![](/images/graph-device.png)
 
-选择显卡驱动
+    选择显卡驱动
 
-![](/images/copying-files.png)
+    ![](/images/copying-files.png)
 
-这个地方很慢，要耐心等..
+    这个地方很慢，要耐心等..
 
 ### BIOS设置
 
