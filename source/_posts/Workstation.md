@@ -15,6 +15,18 @@ tags:
 
 ## 硬件环境
 
+项目 | 名称
+-----|-----
+CPU | Xeon E5 2683 v3 * 2
+主板 | Intel S2600CW2R
+内存 | 三星 DDR4 ECC 32g * 2
+显卡 | Asus R9 270
+网卡 | TP-LINK TL-WDN4800
+机箱 | 银欣乌鸦3
+散热器 | 九州风神大霜塔 * 2
+键盘 | HHKB PRO2
+硬盘 | SSD 128g + 4TB 黑盘
+
 ### CPU
 
 ### 内存
