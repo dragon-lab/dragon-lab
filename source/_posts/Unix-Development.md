@@ -19,7 +19,7 @@ tags:
 
 ### Makefile
 
-## 内存
+## 内存管理
 
 ### malloc
 
