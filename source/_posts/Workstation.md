@@ -49,14 +49,44 @@ Ctrl+u | 删除到行首
 Ctrl+k | 删除到行尾
 Ctrl+l | 类似 clear 命令效果
 
-## 系统环境
-
-### macos sierra
+## macos sierra
 
     这里需要说明的是黑苹果安装是不被苹果允许的
 
-#### 下载macos sierra
+### 下载基础工具
 
-从App Store中下载`macos sierra`
+从`App Store`中下载`macos sierra`
 
-### fedora
+![Download-macos](/images/download-macos-sierra.png)
+
+下载[Unibeast](/assets/UniBeast-7.0.1.zip)，用于制作U盘镜像。
+
+### 制作USB启动工具
+
+格式化USB设备（U盘）
+
+![](/images/formatter-usb-boot-device.png)
+
+![](/images/formatter-usb-boot-device2.png)
+
+使用Unibeast制作U盘镜像
+
+![](/images/selected-usb.png)
+
+![](/images/selected-installation-type.png)
+
+![](/images/bootloader-configuration.png)
+
+如果主板支持UEFI引导，则选择第一个，不支持则选择第二个。
+
+![](/images/graph-device.png)
+
+选择显卡驱动
+
+### BIOS设置
+
+### 安装macos sierra
+
+### MultiBeast设置引导
+
+### 常见问题和优化
