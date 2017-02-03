@@ -83,6 +83,10 @@ Ctrl+l | 类似 clear 命令效果
 
 选择显卡驱动
 
+![](/images/copying-files.png)
+
+这个地方很慢，要耐心等..
+
 ### BIOS设置
 
 ### 安装macos sierra
