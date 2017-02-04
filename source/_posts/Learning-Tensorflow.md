@@ -2,7 +2,7 @@
 title: Tensorflow 学习之路
 date: 2017-02-04 10:47:11
 tags:
-    - 人工智能
+    - 机器学习
 ---
 
 ## Tensorflow 示例
@@ -42,6 +42,8 @@ https://github.com/aymericdamien/TensorFlow-Examples
 
 ```bash
 $ git clone https://github.com/anishathalye/neural-style.git
+
+$ cd neural-style
 ```
 
 #### 下载训练集
@@ -53,7 +55,10 @@ curl -O http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.
 #### 安装Python依赖
 
 ```
-$ pip install 
+$ pip install numpy
+$ pip install scipy
+$ pip install vgg
+$ pip install pillow
 ```
 
 #### 运行应用
