@@ -29,21 +29,10 @@ https://github.com/kevinhughes27/TensorKart
 6. Udacity自驾模拟项目Nanodegree
 https://github.com/upul/behavioral_cloning
 
-## Tensorflow 体验
+## Tensorflow 资料
 
-本节主要是用来找成就感的
-
-### neural-style
-
-### style-transfer
-
-### PaintsChainer
-
-### DeepLearningFlappyBird
-
-### TensorKart
-
-### behavioral_cloning
+1. Tensorflow从入门到精通
+https://github.com/aymericdamien/TensorFlow-Examples
 
 ## Tensorflow 安装
 
