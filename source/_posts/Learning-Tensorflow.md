@@ -64,7 +64,7 @@ $ pip install pillow
 #### 运行应用
 
 ```
-$ python neural_style.py --content examples/1-content.jpg --styles examples/1-style.jpg --output output.jpg
+$ python neural_style.py --content examples/1-content.jpg --styles examples/1-style.jpg --output output.jpg --iterations 1000
 ```
 
 #### 查看结果
