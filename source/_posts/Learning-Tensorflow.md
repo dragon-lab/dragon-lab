@@ -46,8 +46,8 @@ $ git clone https://github.com/anishathalye/neural-style.git
 
 #### 下载训练集
 
-```url
-http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
+```bash
+curl -O http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
 ```
 
 #### 安装Python依赖
