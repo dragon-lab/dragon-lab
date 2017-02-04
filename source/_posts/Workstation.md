@@ -22,10 +22,17 @@ CPU | Xeon E5 2683 v3 * 2
 内存 | 三星 DDR4 ECC 32g * 2
 显卡 | Asus R9 270
 网卡 | TP-LINK TL-WDN4800
+电源 | 海韵（Seasonic）额定620W M12II-620 电源
 机箱 | 银欣乌鸦3
 散热器 | 九州风神大霜塔 * 2
 键盘 | HHKB PRO2
 硬盘 | SSD 128g + 4TB 黑盘
+
+### 电源
+
+![](/images/power-1.jpg)
+
+![](/images/power-2.jpg)
 
 ### CPU
 
