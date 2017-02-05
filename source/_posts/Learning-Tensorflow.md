@@ -150,6 +150,8 @@ $ pip install pillow
 $ python neural_style.py --content examples/1-content.jpg --styles examples/1-style.jpg --output output.jpg --iterations 1000
 ```
 
+    运行太慢的话，可以考虑缩小图片大小，或者升级机器配置。
+
 #### 查看结果
 
 ![原图](/images/hhkb-keyboard.jpg)
