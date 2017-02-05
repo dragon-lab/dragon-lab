@@ -34,47 +34,6 @@ https://github.com/upul/behavioral_cloning
 1. Tensorflow从入门到精通
 https://github.com/aymericdamien/TensorFlow-Examples
 
-## Tensorflow 体验
-
-### neural-style
-
-#### 下载源代码
-
-```bash
-$ git clone https://github.com/anishathalye/neural-style.git
-
-$ cd neural-style
-```
-
-#### 下载训练集
-
-```bash
-curl -O http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
-```
-
-#### 安装Python依赖
-
-```
-$ pip install numpy
-$ pip install scipy
-$ pip install vgg
-$ pip install pillow
-```
-
-#### 运行应用
-
-```
-$ python neural_style.py --content examples/1-content.jpg --styles examples/1-style.jpg --output output.jpg --iterations 1000
-```
-
-#### 查看结果
-
-![原图](/images/hhkb-keyboard.jpg)
-
-![样式图](/images/1-style.jpg)
-
-![结果图](/images/hhkb-keyboard.jpg)
-
 ## Tensorflow 安装
 
 ### 源代码安装
@@ -158,4 +117,45 @@ Hello, TensorFlow!
 42
 >>>
 ```
+
+## Tensorflow 体验
+
+### neural-style
+
+#### 下载源代码
+
+```bash
+$ git clone https://github.com/anishathalye/neural-style.git
+
+$ cd neural-style
+```
+
+#### 下载训练集
+
+```bash
+curl -O http://www.vlfeat.org/matconvnet/models/beta16/imagenet-vgg-verydeep-19.mat
+```
+
+#### 安装Python依赖
+
+```
+$ pip install numpy
+$ pip install scipy
+$ pip install pillow
+```
+
+#### 运行应用
+
+```
+$ python neural_style.py --content examples/1-content.jpg --styles examples/1-style.jpg --output output.jpg --iterations 1000
+```
+
+#### 查看结果
+
+![原图](/images/hhkb-keyboard.jpg)
+
+![样式图](/images/1-style.jpg)
+
+![结果图](/images/hhkb-keyboard.jpg)
+
 
