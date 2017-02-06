@@ -38,13 +38,17 @@ CPU | Xeon E5 2683 v3 * 2
 
 ### 内存
 
+![](/images/memory.jpg)
+
 ### 主板
 
 ### 显卡
 
 ### 机箱
 
-### 散热
+### 散热器
+
+![](/images/radiator.jpg)
 
 ### 键盘
 
