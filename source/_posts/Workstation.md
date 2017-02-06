@@ -116,12 +116,12 @@ Ctrl+l | 类似 clear 命令效果
 
 ### 安装macos sierra
 
-正常的macos安装过程
+正常的macos安装过程，没有特别的异常，不多做说明
 
 ### MultiBeast设置引导
 
-    ![](/images/multibeast.png)
+![](/images/multibeast.png)
 
-    勾选好需要的驱动程直接点击安装就好了， 整个过程比较顺利
+勾选好需要的驱动程直接点击安装就好了， 整个过程比较顺利
 
 ### 常见问题和优化
