@@ -14,6 +14,40 @@ tags:
 
 ### gateway
 
+gateway 用作整个集群内网和外部网络的交互入口，需要设置3块网卡。分别用于：
+
+1. gateway机器自身访问外网
+
+    ![](/images/gateway-network0.png)
+
+2. 直接访问gateway，方便登录集群机器
+
+    ![](/images/gateway-network1.png)
+
+3. 集群内部网络通讯
+
+    ![](/images/gateway-network2.png)
+
+    下面使用`nmtui`命令，设置主机名和网络。
+
+4. 设置主机名
+    ![](/images/vbox-hostname.png)
+
+    ![](/images/vbox-hostname2.png)
+
+5. 激活网卡
+
+    ![](/images/vbox-active-eth.png)
+
+6. 设置网卡
+    ![](/images/vbox-setting-enp0s3.png)
+
+    ![](/images/vbox-setting-enp0s8.png)
+
+    ![](/images/vbox-setting-enp0s9.png)
+
+    设置`gateway`的内网ip地址为`10.0.0.1`
+
 ### SNAT 网关
 
 禁用`firewalld`，至于为啥因为我还不会用`firewalld`。
@@ -44,6 +78,13 @@ $ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 $ iptables -t nat -A POSTROUTING -s 10.0.0.0/8 -j SNAT --to <gateway ip>
 ```
 
+开放10.0.0.0/8网段访问限制
+
+```bash
+$ iptables -I FORWARD -s 10.0.0.0/8 -j ACCEPT
+$ iptables -I FORWARD -d 10.0.0.0/8 -j ACCEPT
+```
+
 保存重启iptables
 
 ```bash
@@ -63,6 +104,11 @@ $ yum install -y dnsmasq.x86_64
 ```
 
 使用iptables开放端口
+
+```bash
+$ iptables -I INPUT -p udp -m udp --sport 53 -j ACCEPT
+$ iptables -I INPUT -p udp -m udp --dport 53 -j ACCEPT
+```
 
 ### yum repo
 
