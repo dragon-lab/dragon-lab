@@ -124,7 +124,7 @@ $ iptables -I INPUT -p udp -m udp --dport 53 -j ACCEPT
 
 ### 启动集群
 
-```bash
+```bash startvm
 #!/bin/bash
 
 vms=`VBoxManage list vms | grep $1 | awk '{print $1}'`
@@ -143,7 +143,7 @@ done
 
 ### 创建集群
 
-```bash
+```bash clonevm
 #!/bin/bash
 
 name=$1
@@ -179,9 +179,7 @@ $ yum install -y git.x86_64 python2-pip.noarch ctags.x86_64
 $ pip install dbgp vim-debug pep8 flake8 pyflakes isort
 ```
 
-.vimrc配置
-
-```vim
+```vim .vimrc
 " Fisa-vim-config
 " http://fisadev.github.io/fisa-vim-config/
 " version: 8.2
@@ -627,9 +625,7 @@ $ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools
 $ yum install tmux.x86_64
 ```
 
-.tmux.conf 配置
-
-```bash
+```bash .tmux.conf
 unbind C-b
 set -g prefix `
 
