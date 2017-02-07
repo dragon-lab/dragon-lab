@@ -17,6 +17,88 @@ $ yum groupinstall -y "Development Tools"
 
 ### GDB
 
+编译程序加上`-g`选项，这样编译出的可执行程序中包含调试信息，否则之后GDB无法载入可执行文件中对应的代码信息。
+
+```bash
+$ gcc -g test.c -o test
+```
+
+启动gdb进行调试
+
+```bash
+$ gdb test
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-94.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>...
+Reading symbols from /root/chapter03/test...done.
+(gdb)
+```
+
+查看文件
+
+```bash
+(Gdb) l
+```
+
+设置断点
+
+```bash
+(gdb) b 6
+Breakpoint 1 at 0x400585: file test.c, line 6.
+```
+需要注意的时，代码并没有运行第6行，而是在运行第6行之前就停止了。
+
+查看断点情况
+
+```bash
+(gdb) info b
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000000000400585 in main at test.c:6
+```
+
+运行代码
+
+```bash
+(gdb) r
+Starting program: /root/chapter03/test
+
+Breakpoint 1, main () at test.c:6
+6    int i, n = 0;
+Missing separate debuginfos , use: debuginfo-install glibc-2.17-157.el7_3.1.x86_64
+```
+
+查看变量值
+
+```bash
+(gdb) p n
+$1 = 0
+```
+
+单步运行
+
+```bash
+(gdb) n
+8    ret = sum(50); 
+```
+
+恢复程序运行
+
+```bash
+(gdb) c
+Continuing.
+The sum of 1-m is 50
+The sum of 1-50 is 50
+[Inferior 1 (process 21754) exited normally]
+```
+
+程序在运行完后退出，之后程序处于“停止状态”
+
 ### Makefile
 
 ## 链接库
