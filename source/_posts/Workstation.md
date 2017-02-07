@@ -40,13 +40,17 @@ CPU | Xeon E5 2683 v3 * 2
 
 ### 内存
 
+![](/images/memory.jpg)
+
 ### 主板
 
 ### 显卡
 
 ### 机箱
 
-### 散热
+### 散热器
+
+![](/images/radiator.jpg)
 
 ### 键盘
 
@@ -122,6 +126,12 @@ Ctrl+l | 类似 clear 命令效果
 
 ### 安装macos sierra
 
+正常的macos安装过程，没有特别的异常，不多做说明
+
 ### MultiBeast设置引导
+
+* 勾选好需要的驱动程直接点击安装就好了， 整个过程比较顺利
+![](/images/multibeast.png)
+
 
 ### 常见问题和优化
