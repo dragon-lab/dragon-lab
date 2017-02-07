@@ -9,6 +9,8 @@ tags:
 
 ### 环境搭建
 
+centos 7 下安装开发环境，运行下面的命令
+
 ```bash
 $ yum groupinstall -y "Development Tools"
 ```
