@@ -4,16 +4,16 @@ date: 2017-02-03 11:51:48
 tags:
     - Linux
 ---
-
-## 工具学习
-
-### 环境搭建
+## 环境搭建
 
 centos 7 下安装开发环境，运行下面的命令
 
 ```bash
 $ yum groupinstall -y "Development Tools"
 ```
+
+
+## 工具学习
 
 ### GDB
 
