@@ -34,6 +34,8 @@ CPU | Xeon E5 2683 v3 * 2
 
 ![](/images/power-2.jpg)
 
+![](/images/power-3.jpg)
+
 ### CPU
 
 ### 内存
@@ -109,6 +111,14 @@ Ctrl+l | 类似 clear 命令效果
     这个地方很慢，要耐心等..
 
 ### BIOS设置
+
+1. 载入Optimized Defaults设置
+
+2. 打开AHCI选项，不然安装过程中可能识别不了硬盘
+
+3. 如果CPU支持VT-d，禁用掉
+
+4. 保存并且退出
 
 ### 安装macos sierra
 

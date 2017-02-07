@@ -158,6 +158,6 @@ $ python neural_style.py --content examples/1-content.jpg --styles examples/1-st
 
 ![样式图](/images/1-style.jpg)
 
-![结果图](/images/hhkb-keyboard.jpg)
+![结果图](/images/hhkb-output.jpg)
 
 
