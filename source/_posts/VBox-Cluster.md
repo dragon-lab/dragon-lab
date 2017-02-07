@@ -48,6 +48,12 @@ gateway 用作整个集群内网和外部网络的交互入口，需要设置3�
 
     设置`gateway`的内网ip地址为`10.0.0.1`
 
+7. 系统更新
+
+```bash
+$ yum update -y
+```
+
 ### SNAT 网关
 
 禁用`firewalld`，至于为啥因为我还不会用`firewalld`。
