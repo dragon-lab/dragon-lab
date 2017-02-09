@@ -194,6 +194,68 @@ gremlin> g.V().has('name','marko').out('created').values('name')
 ==>lop
 ```
 
+### 加载数据
+
+```bash
+$ curl -L -O http://snap.stanford.edu/data/wiki-Vote.txt.gz
+$ gunzip wiki-Vote.txt.gz
+```
+
+```groovy
+graph = TinkerGraph.open()
+graph.createIndex('userId', Vertex.class) (1)
+
+g = graph.traversal()
+
+getOrCreate = { id ->
+  g.V().has('userId', id).tryNext().orElseGet{ g.addV('userId', id).next() }
+}
+
+new File('wiki-Vote.txt').eachLine {
+  if (!it.startsWith("#")){
+    (fromVertex, toVertex) = it.split('\t').collect(getOrCreate) (2)
+    fromVertex.addEdge('votesFor', toVertex)
+  }
+} } }
+```
+
+在`Gremlin Console`里的运行结果如下：
+
+```gremlin
+➜  apache-tinkerpop-gremlin-console-3.2.3 bin/gremlin.sh
+
+         \,,,/
+         (o o)
+-----oOOo-(3)-oOOo-----
+plugin activated: tinkerpop.server
+plugin activated: tinkerpop.utilities
+plugin activated: tinkerpop.tinkergraph
+gremlin> graph = TinkerGraph.open()
+==>tinkergraph[vertices:0 edges:0]
+gremlin> graph.createIndex('userId', Vertex.class)
+==>null
+gremlin> g = graph.traversal()
+==>graphtraversalsource[tinkergraph[vertices:0 edges:0], standard]
+gremlin>
+gremlin> getOrCreate = { id ->
+......1>     g.V().has('userId', id).tryNext().orElseGet{ g.addV('userId', id).next() }
+......2> }
+==>groovysh_evaluate$_run_closure1@323e8306
+gremlin> new File('../wiki-Vote.txt').eachLine {
+......1>     if (!it.startsWith("#")){
+......2>         (fromVertex, toVertex) = it.split('\t').collect(getOrCreate)
+......3>         fromVertex.addEdge('votesFor', toVertex)
+......4>     }
+......5> }
+==>e[117918][117916-votesFor->44907] } }
+```
+
+1. 首先为了快速查询节点，建立索引
+
+2. 在`wiki-Vote.txt`的每一行使用`\t`区分`from`、`to`顶点
+
+3. 加载更大的数据集，建议阅读[BulkLoaderVertexProgram(BLVP)](http://tinkerpop.apache.org/docs/3.2.3/reference/#bulkloadervertexprogram)，提供了一种可以加载任意大小数据的方法。
+
 ### Gremlin Server
 
 下载[Gremlin Server](https://www.apache.org/dyn/closer.lua/tinkerpop/3.2.3/apache-tinkerpop-gremlin-server-3.2.3-bin.zip)
