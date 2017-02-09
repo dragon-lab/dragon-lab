@@ -167,7 +167,7 @@ gremlin> v1 = graph.addVertex(T.id, 1, T.label, "person", "name", "marko", "age"
 ==>v[1]
 gremlin> v2 = graph.addVertex(T.id, 3, T.label, "software", "name", "lop", "lang", "java")
 ==>v[3]
-gremlin> v1.addEdge("created", v2, id, 9, "weight", 0.4)
+gremlin> v1.addEdge("created", v2, T.id, 9, "weight", 0.4)
 ==>e[9][1-created->3]
 ```
 
@@ -180,10 +180,6 @@ gremlin> g = graph.traversal();
 ==>graphtraversalsource[tinkergraph[vertices:2 edges:1], standard]
 gremlin> g.V().has("name", "marko")
 ==>v[1]
-gremlin> g.V().has('name','marko').outE('created')
-==>e[9][1-created->3]
-gremlin> g.V().has('name','marko').outE('created').inV()
-==>v[3]
 gremlin> g.V().has('name','marko').outE('created')
 ==>e[9][1-created->3]
 gremlin> g.V().has('name','marko').outE('created').inV()
@@ -296,4 +292,137 @@ $ bin/gremlin-server.sh
 [INFO] GremlinServer$1 - Gremlin Server configured with worker thread pool of 1, gremlin pool of 4 and boss thread pool of 1.
 [INFO] GremlinServer$1 - Channel started at port 8182.
 ```
+
+## TinkerPop
+
+TinkerPop 支持的features
+
+```gremlin
+gremlin> graph = TinkerGraph.open()
+==>tinkergraph[vertices:0 edges:0]
+gremlin> graph.features()
+==>FEATURES
+> GraphFeatures
+>-- Persistence: true
+>-- ConcurrentAccess: false
+>-- ThreadedTransactions: false
+>-- Transactions: false
+>-- Computer: true
+> VariableFeatures
+>-- Variables: true
+>-- FloatValues: true
+>-- IntegerValues: true
+>-- LongValues: true
+>-- MapValues: true
+>-- MixedListValues: true
+>-- SerializableValues: true
+>-- StringValues: true
+>-- UniformListValues: true
+>-- BooleanArrayValues: true
+>-- ByteArrayValues: true
+>-- DoubleArrayValues: true
+>-- FloatArrayValues: true
+>-- IntegerArrayValues: true
+>-- LongArrayValues: true
+>-- StringArrayValues: true
+>-- BooleanValues: true
+>-- ByteValues: true
+>-- DoubleValues: true
+> VertexFeatures
+>-- RemoveVertices: true
+>-- MultiProperties: true
+>-- AddVertices: true
+>-- MetaProperties: true
+>-- AddProperty: true
+>-- RemoveProperty: true
+>-- NumericIds: true
+>-- StringIds: true
+>-- UuidIds: true
+>-- CustomIds: false
+>-- AnyIds: true
+>-- UserSuppliedIds: true
+> VertexPropertyFeatures
+>-- AddProperty: true
+>-- RemoveProperty: true
+>-- NumericIds: true
+>-- StringIds: true
+>-- UuidIds: true
+>-- CustomIds: false
+>-- AnyIds: true
+>-- UserSuppliedIds: true
+>-- Properties: true
+>-- FloatValues: true
+>-- IntegerValues: true
+>-- LongValues: true
+>-- MapValues: true
+>-- MixedListValues: true
+>-- SerializableValues: true
+>-- StringValues: true
+>-- UniformListValues: true
+>-- BooleanArrayValues: true
+>-- ByteArrayValues: true
+>-- DoubleArrayValues: true
+>-- FloatArrayValues: true
+>-- IntegerArrayValues: true
+>-- LongArrayValues: true
+>-- StringArrayValues: true
+>-- BooleanValues: true
+>-- ByteValues: true
+>-- DoubleValues: true
+> EdgeFeatures
+>-- AddEdges: true
+>-- RemoveEdges: true
+>-- AddProperty: true
+>-- RemoveProperty: true
+>-- NumericIds: true
+>-- StringIds: true
+>-- UuidIds: true
+>-- CustomIds: false
+>-- AnyIds: true
+>-- UserSuppliedIds: true
+> EdgePropertyFeatures
+>-- Properties: true
+>-- FloatValues: true
+>-- IntegerValues: true
+>-- LongValues: true
+>-- MapValues: true
+>-- MixedListValues: true
+>-- SerializableValues: true
+>-- StringValues: true
+>-- UniformListValues: true
+>-- BooleanArrayValues: true
+>-- ByteArrayValues: true
+>-- DoubleArrayValues: true
+>-- FloatArrayValues: true
+>-- IntegerArrayValues: true
+>-- LongArrayValues: true
+>-- StringArrayValues: true
+>-- BooleanValues: true
+>-- ByteValues: true
+>-- DoubleValues: true
+```
+
+Blueprints支持的存储
+
+TinkerGraph (TinkerGraph) 
+Neo4j Implementation (Neo4jGraph) 
+Neo4jHA Implementation (Neo4jHaGraph) 
+Neo4jBatch Implementation (Neo4jBatchGraph) 
+Sail Implementation (SailGraph) 
+Sparksee Implementation (SparkseeGraph) 
+Rexster Implementation (RexsterGraph) 
+Accumulo Implementation (AccumuloGraph – 3rd party – implements Blueprints 2.4.0) 
+ArangoDB Implementation (ArangoDBGraph – 3rd party – implements Blueprints 2.3.0) 
+Bitsy (BitsyGraph – 3rd party – implements Blueprints 2.4.0) 
+Bigdata (BigdataGraph – 3rd party – implements Blueprints 2.5.0) 
+FluxGraph - Datomic Implementation (FluxGraph – 3rd party – implements Blueprints 2.1.0) 
+FoundationDB Implementation (FoundationDBGraph – 3rd party – implements Blueprints 2.4.0) 
+InfiniteGraph Implementation (IGGraph – 3rd party – implements Blueprints 2.1.0) 
+JPA Implementation (JpaGraph – 3rd party – implements Blueprints 2.5.0) 
+MongoDB Implementation (MongoDBGraph – 3rd party – implements Blueprints 2.3.0) 
+Oracle NoSQL Implementation (KVGraph – 3rd party – implements Blueprints 2.1.0) 
+OrientDB Implementation (OrientGraph – 3rd party – implements Blueprints 2.4.0) 
+SQL/JDBC Implementation – 3rd party – implements Blueprints 2.4.0) 
+Titan Implementation (TitanGraph – 3rd party – implements Blueprints 2.3.0)
+
 
