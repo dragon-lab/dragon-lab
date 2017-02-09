@@ -35,6 +35,8 @@ https://github.com/rancher/lb-controller
 
 ## 系统监控篇
 
+### Netsil
+
 ## 持续集成篇
 
 ### Fabric8
