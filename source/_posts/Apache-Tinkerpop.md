@@ -293,9 +293,21 @@ $ bin/gremlin-server.sh
 [INFO] GremlinServer$1 - Channel started at port 8182.
 ```
 
-## TinkerPop
+## TinkerPop 高级功能
 
-TinkerPop 支持的features
+### TinkerPop 2
+
+`TinkerPop 2`中的组件和`TinkerPop 3`的对应关系
+
+Blueprints → Gremlin Structure API
+Pipes → GraphTraversal
+Frames → Traversal
+Furnace → GraphComputer and VertexProgram
+Rexster → GremlinServer
+
+### Features
+
+查看`TinkerPop`支持的features
 
 ```gremlin
 gremlin> graph = TinkerGraph.open()
@@ -402,27 +414,184 @@ gremlin> graph.features()
 >-- DoubleValues: true
 ```
 
-Blueprints支持的存储
+## TinkerPop 存储
+
+### TinkerGraph
 
 TinkerGraph (TinkerGraph) 
-Neo4j Implementation (Neo4jGraph) 
-Neo4jHA Implementation (Neo4jHaGraph) 
-Neo4jBatch Implementation (Neo4jBatchGraph) 
-Sail Implementation (SailGraph) 
-Sparksee Implementation (SparkseeGraph) 
-Rexster Implementation (RexsterGraph) 
-Accumulo Implementation (AccumuloGraph – 3rd party – implements Blueprints 2.4.0) 
-ArangoDB Implementation (ArangoDBGraph – 3rd party – implements Blueprints 2.3.0) 
-Bitsy (BitsyGraph – 3rd party – implements Blueprints 2.4.0) 
-Bigdata (BigdataGraph – 3rd party – implements Blueprints 2.5.0) 
-FluxGraph - Datomic Implementation (FluxGraph – 3rd party – implements Blueprints 2.1.0) 
-FoundationDB Implementation (FoundationDBGraph – 3rd party – implements Blueprints 2.4.0) 
-InfiniteGraph Implementation (IGGraph – 3rd party – implements Blueprints 2.1.0) 
-JPA Implementation (JpaGraph – 3rd party – implements Blueprints 2.5.0) 
-MongoDB Implementation (MongoDBGraph – 3rd party – implements Blueprints 2.3.0) 
-Oracle NoSQL Implementation (KVGraph – 3rd party – implements Blueprints 2.1.0) 
-OrientDB Implementation (OrientGraph – 3rd party – implements Blueprints 2.4.0) 
-SQL/JDBC Implementation – 3rd party – implements Blueprints 2.4.0) 
-Titan Implementation (TitanGraph – 3rd party – implements Blueprints 2.3.0)
 
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-core</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Neo4j
+
+Neo4j Implementation (Neo4jGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-neo4j-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+或者
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-neo4j2-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Neo4jHA
+
+Neo4jHA Implementation (Neo4jHaGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-neo4j-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Neo4jBatch
+
+Neo4jBatch Implementation (Neo4jBatchGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-neo4jbatch-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Sail
+
+Sail Implementation (SailGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-sail-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Sparksee
+
+Sparksee Implementation (SparkseeGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-sparksee-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Rexster
+
+Rexster Implementation (RexsterGraph) 
+
+```xml
+<dependency>
+   <groupId>com.tinkerpop.blueprints</groupId>
+   <artifactId>blueprints-rexster-graph</artifactId>
+   <version>??</version>
+</dependency>
+```
+
+### Accumulo
+
+Accumulo Implementation (AccumuloGraph – 3rd party – implements Blueprints 2.4.0) 
+
+```xml
+<dependency>
+    <groupId>edu.jhuapl.tinkerpop</groupId>
+    <artifactId>blueprints-accumulo-graph</artifactId>
+    <version>0.2.1</version>
+</dependency>
+```
+
+### ArangoDB
+
+ArangoDB Implementation (ArangoDBGraph – 3rd party – implements Blueprints 2.3.0) 
+
+```xml
+<dependency>
+    <groupId>com.arangodb</groupId>
+    <artifactId>blueprints-arangodb-graph</artifactId>
+    <version>1.0.15</version>
+</dependency>
+```
+
+### Bitsy
+
+Bitsy (BitsyGraph – 3rd party – implements Blueprints 2.4.0) 
+
+```xml
+<dependency>
+  <groupId>com.lambdazen.bitsy</groupId>
+  <artifactId>bitsy</artifactId>
+  <version>1.5.2</version>
+</dependency>
+```
+
+### Bigdata
+
+Bigdata (BigdataGraph – 3rd party – implements Blueprints 2.5.0) 
+
+### FluxGraph
+
+FluxGraph - Datomic Implementation (FluxGraph – 3rd party – implements Blueprints 2.1.0) 
+
+### FoundationDB
+
+FoundationDB Implementation (FoundationDBGraph – 3rd party – implements Blueprints 2.4.0) 
+
+### InfiniteGraph
+
+InfiniteGraph Implementation (IGGraph – 3rd party – implements Blueprints 2.1.0) 
+
+### JPA
+
+JPA Implementation (JpaGraph – 3rd party – implements Blueprints 2.5.0) 
+
+```xml
+ <dependency>
+     <groupId>com.wingnest.blueprints</groupId>
+     <artifactId>blueprints-jpa-graph</artifactId>
+     <version>2.5.0_01</version>
+ </dependency>
+ Repository: http://www.wingnest.com/mvn-repo/ 
+```
+
+### MongoDB
+
+MongoDB Implementation (MongoDBGraph – 3rd party – implements Blueprints 2.3.0) 
+
+### Oracle NoSQL
+
+Oracle NoSQL Implementation (KVGraph – 3rd party – implements Blueprints 2.1.0) 
+
+### OrientDB
+
+OrientDB Implementation (OrientGraph – 3rd party – implements Blueprints 2.4.0) 
+
+### SQL/JDBC
+
+SQL/JDBC Implementation – 3rd party – implements Blueprints 2.4.0) 
+
+### Titan
+
+Titan Implementation (TitanGraph – 3rd party – implements Blueprints 2.3.0)
 
