@@ -675,3 +675,19 @@ bind r source-file ~/.tmux.conf \; display "Configuration Reload"
 ### ansible
 
 非常好用的集群管理工具，详情参考另一篇博文[《Ansible 学习之路》](/2017/02/07/Learning-Ansible/)
+
+
+cd /etc/yum.repos.d
+wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo
+
+解决phpvirtualbox Error logging in to vboxwebsrv
+VBoxManage setproperty vrdeauthlibrary "VBoxAuthSimple"
+
+/etc/vbox/vbox.cfg
+
+VBOXWEB_HOST=0.0.0.0
+VBOXWEB_PORT=18083
+
+VBOXWEB_LOGFILE
+VBOXWEB_LOGSIZE
+VBOXWEB_LOGINTERVAL
